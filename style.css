@@ -1,0 +1,97 @@
+/**
+Theme Name: customweb
+Theme URI: http://www.webdesigndenhaag.net/
+Description: WP Theme for wp projects
+Version: 0.2.0
+Details URI: http://webdesigndenhaag.net/
+Author: Webbouwer
+Author URI: https://github.com/webbouwer
+License: GPL 3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: customweb
+Tags: theme-options, custom-menu, full-width-template, featured-image-header, featured-images
+*/
+
+
+/* default */
+*
+{
+margin:0;
+padding:0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+html,
+body
+{
+height:100%;
+width:100%;
+}
+body
+{
+font-family: "Helvetica", arial, serif;
+font-size:15px;
+color: black;
+background-color: white;
+}
+
+.clr
+{
+clear: both;
+height: 0;
+}
+
+
+/* customizer */
+.customizer-placeholder
+{
+display: inline-block;
+font-size: 11px;
+padding:2px;
+border:1px solid white;
+color:white;
+background-color: cadetblue;
+}
+
+/* pageframe */
+#pagecontainer
+{
+position: relative;
+display: block;
+width:100%;
+min-height: 100%;
+}
+
+.outerspace
+{
+position: relative;
+width:96%;
+max-width:1280px;
+margin:0px auto;
+min-height: 100%;
+}
+
+
+.widget,
+.widget h3,
+.widget ul
+{
+display:block;
+}
+
+@media screen and (min-width: 560px) {
+
+#maincontentbar
+{
+width: 70%;
+float:left;
+}
+
+#mainsidebar
+{
+width:30%;
+float:right;
+}
+
+}
