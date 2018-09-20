@@ -1,2 +1,2 @@
 # customweb
-WP custom theme
+WP custom theme for setup new themes

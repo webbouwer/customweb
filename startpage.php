@@ -126,7 +126,24 @@ echo '<body '.$headerbgstyle.' '; body_class(); echo '>';
 ?>
     <div id="pagecontainer" class="site">
     
+        <div id="sidecontainer">
+            <div class="logobox">
+                <?php wp_main_theme_toplogo_html(); ?>
+            </div>
+            <div class="menubox">
+                <?php
+                    wp_main_theme_menu_html( 'side' );
+                ?>
+            </div>
+            <div class="contentbox">
+                <?php
+                    wp_main_theme_widgetarea_html( 'sidebar' );
+                ?>
+            </div>
+        </div>
 		<div id="postcontainer"></div>
+		<div id="gallerycontainer"></div>
+        <div id="pagecontainer"></div>
 
     <?php
     /* default pageframe:

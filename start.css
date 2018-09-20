@@ -1,1 +1,23 @@
 /* custom start */
+
+.logobox,
+.logobox img
+{
+max-width:100%;
+}
+
+#pagecontainer
+{
+}
+
+#sidecontainer
+{
+width:0%;
+float:right;
+overflow-x:hidden;
+}
+
+#postcontainer
+{
+width:100%;
+}
