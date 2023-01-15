@@ -101,8 +101,7 @@ function wp_main_theme_get_postdata(){
             while ( $query->have_posts() ) : $query->the_post();
                 // post text
                 $excerpt_length = 120; // words
-                $post = get_post($post->id);
-                $fulltext = $post->post_content;//  str_replace( '<!--more-->', '',);
+                $fulltext = get_the_content();//  str_replace( '<!--more-->', '',);
                 $content = apply_filters('the_content', $fulltext );
                 $excerpt = truncate( $content, $excerpt_length, '', false, true );  // get_the_excerpt()
                 $response[] = array(
@@ -299,8 +298,7 @@ function wp_main_theme_loop_html(){
 
                 // post content section
                 $excerpt_length = 24; // char count
-                $post = get_post($post->id);
-                $fulltext = $post->post_content;//  str_replace( '<!--more-->', '',);
+                $fulltext = get_the_content(); //  str_replace( '<!--more-->', '',);
                 $content = apply_filters('the_content', $fulltext );
                 $excerpt = truncate( $content, $excerpt_length, '', false, true );  // get_the_excerpt()
 
@@ -340,7 +338,7 @@ function wp_time_ago( $t ) {
 }
 
 // image orient
-function check_image_orientation($pid){
+function custom_image_orientation($pid){
 	$orient = 'square';
     $image = wp_get_attachment_image_src( get_post_thumbnail_id($pid), '');
     $image_w = $image[1];
